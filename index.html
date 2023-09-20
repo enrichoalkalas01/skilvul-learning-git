@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./external.css">
+</head>
+<body>
+    <style>
+        #wrapper-menu {
+            font-size: 32px;
+        }
+
+        #wrapper-menu .menu {
+            color: red;
+            transition: 1s;
+        }
+
+        #wrapper-menu .menu:hover {
+            color: black;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            transition: 1s;
+        }
+
+        #wrapper-box {
+            width: auto;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            padding: 20px 20px;
+        }
+
+        #wrapper-box .box {
+            width: 250px;
+            height: 250px;
+            background-color: #dedede;
+            position: relative;
+            /* margin-right: 50px;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px; */
+        }
+
+        #wrapper-box .box.box-1 {
+            background-color: burlywood;
+        }
+
+        #wrapper-box .box.box-2 {
+            background-color: rgb(135, 166, 222);
+            /* position: absolute; */
+            width: 100%;
+        }
+
+        /* Max = 575px - 0px */
+        /* Min = 575px - ke atas ( 1920px - tak hingga ) */
+        @media screen and ( max-width: 575px ) {
+            #wrapper-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <div>
+        <ul id="wrapper-menu">
+            <li class="menu">List 1</li>
+            <li class="menu">List 2</li>
+            <li class="menu">List 3</li>
+        </ul>
+    </div>
+
+    <div id="wrapper-box">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+    </div>
+
+    font = px / rem
+    px
+
+    ## VH = Viewport Height, VW = Viewport Width
+    misalkan device kita ukuran width 13inch laptop = 1366px
+    100 vw / vh = 1366px ( device dirubah, ukuran nya akan tetap sama )
+    100% ? ( device berubah misal dari 1366px ke 768px ) 100% = 768px
+
+    <script src="./external.js"></script>
+    <script>
+        let namaKotakAlatBangunan = 'asd'
+        let nama_kotak_makanan = 'nasi'
+
+        let asdasd2 = ""
+        // let nama nasi kotak = 'asd'
+
+        let hitung = 'asd'
+        let Hitung = 'asdasd'
+
+
+        // Variable Type Data
+
+        // String = tipe data yang berbentuk text / huruf
+        let string = ''
+        let string2 = ""
+        let string3 = ``
+
+        // Number / Iteger = tipe data yang berbentuk angka
+        let number = 1
+        let number2 = -1
+
+        // Float / Double = tipe data angka yang berbentuk koma
+        // perbedaan float dan double itu ada di panjang koma nya
+        // float koma nya lebih kecil dibanding kan double
+        let float = 0.5334567
+        let double = 0.32293847239482
+
+        // Boolean = tipe data true / false
+        let sayaSudahPunyaIstri = true // false
+
+        // Null = tipe data kosong
+        let kosong = null
+        let kosong2 = 0 // tidak dikatakan kosong, karena ada isinya yaitu angka 0
+
+        // Tipe Data Undefined
+        let dataUndefined = undefined
+        let dataUndefined2
+        // console.log(dataUndefined3) // undefined ( sekarang sudah dianggap error )
+
+        // Symbol ( unknown type data )
+        let dataSymbol = Symbol()
+
+        // Object
+        let dataObject = {
+            alatTulist: 'pulpen penggaris pensil penghapus',
+            makanan: 'apel mangga cherry',
+            pakaian: 'baju celana topi',
+            number: 0,
+            tanaman: [
+                { title: 'tanaman jeruk', price: 10000, expired: 10 },
+                { title: 'tanaman anggur', price: 10000, expired: 10 },
+                { title: 'tanaman mangga', price: 10000, expired: 10 },
+            ]
+        }
+
+        // console.log(dataObject.tanaman)
+        // console.log(dataObject.tanaman[0])
+        // console.log(dataObject.tanaman[0].title)
+
+        // Array ( dikhususkan untuk data yang berupa list / antrian )
+        let dataArray = []
+        let tanaman = ['apel', 'mangga', 'jeruk', 'anggur', 'jambu', 'pir', 'tomat']
+        // Pemanggilan array harus sesuai urutan
+        // Diawali oleh urutan ke - 0, bukan ke - 1
+        
+        // console.log(tanaman)
+        // console.log(tanaman[0], tanaman[2])
+
+        let dataTanaman = [
+            { title: 'tanaman jeruk', price: 10000, expired: 10 },
+            { title: 'tanaman anggur', price: 10000, expired: 10 },
+            { title: 'tanaman mangga', price: 10000, expired: 10 },
+        ]
+
+        // console.log(dataTanaman)
+        // console.log(dataTanaman[0])
+        // console.log(dataTanaman[0].title)
+
+        // Bahasa Komputer = Biners -> arus listrik | 1 = nyala / 0 = mati
+
+        // looping
+        // for, while, do while, foreach, map, dll
+        for ( let i = 0; i < tanaman.length; i++ ) {
+            // console.log(tanaman[i])
+        }
+
+        // Tipe Variable = var, let, const
+        // var = tipe data yang bisa dirubah ( isinya / valuenya )
+        // let = tipe data yang bisa dirubah ( isinya / valuenya )
+        // const = tipe data yang tidak bisa dirubah ( isinya / valuenya )
+
+        // var = global
+        // let & const = local
+
+        let nilai1 = 5
+        // nilai1 = nilai1 * 5
+        nilai1 *= 5
+
+        // console.log(nilai1)
+
+        let stringFirstName = "Enricho"
+        let stringLastName = "Alkalas"
+        let fullName = stringFirstName + " " + stringLastName
+        // fullName += " Aja"
+        // hasilnya "EnrichoAlkalas"
+        // console.log(fullName)
+
+
+        // console.log(nilai1 == "25") // Boolean
+        // console.log(nilai1 === "25") // Boolean
+        // console.log(nilai1 != 25) // false
+        // console.log(nilai1 > 35) // false
+        // console.log(nilai1 >= 25) // true
+
+        // && = dan
+        // || = atau
+        // ! = bukan        
+
+        function alatBuatKue(bahan1, bahan2, bahan3, bahan4, bahan5) {
+            // Mentega, air, gula, telur, tepung
+            let apakahBahanSesuai = false
+
+            // Check Bahan 1 Apakah Sesuai
+            if (
+                (bahan1 === 'tepung' || bahan1 === 'mentega' || bahan1 === 'air' || bahan1 === 'gula' || bahan1 === 'telur') // true / false
+                &&
+                (bahan2 === 'tepung' || bahan2 === 'mentega' || bahan2 === 'air' || bahan2 === 'gula' || bahan2 === 'telur')
+                &&
+                (bahan3 === 'tepung' || bahan3 === 'mentega' || bahan3 === 'air' || bahan3 === 'gula' || bahan3 === 'telur')
+                &&
+                (bahan4 === 'tepung' || bahan4 === 'mentega' || bahan4 === 'air' || bahan4 === 'gula' || bahan4 === 'telur')
+                &&
+                (bahan5 === 'tepung' || bahan5 === 'mentega' || bahan5 === 'air' || bahan5 === 'gula' || bahan5 === 'telur')
+            ) {
+                // Bahan 1 sesuai nggk dengan ketentuan bahan kue ? true / false
+                // Bahan 2 sesuai nggk dengan ketentuan bahan kue ? true / false
+                // Bahan 3 sesuai nggk dengan ketentuan bahan kue ? true / false
+                // Bahan 4 sesuai nggk dengan ketentuan bahan kue ? true / false
+                // Bahan 5 sesuai nggk dengan ketentuan bahan kue ? true / false
+
+                // console.log(bahan1)
+                apakahBahanSesuai = true
+            } else {
+                apakahBahanSesuai = false
+                console.log('bahan tidak sesuai aturan!')
+            }
+
+
+            if ( apakahBahanSesuai === true ) {
+                console.log('Jadilah kue')
+                return "Kue Nastar"
+            } else if ( apakahBahanSesuai === false) {
+                console.log('Tidak Jadi apa-apa, ada bahan yang tidak sesuai!')
+            } else {
+                console.log('Tidak Jadi apa-apa, ada bahan yang tidak sesuai!')
+                return "Nothing"
+            }
+        }
+        // console.log(alatBuatKue('jeruk', 'gula', 'air', 'tepung', 'telur'))
+
+
+        const user = "enricho alkalas"
+        function apaAjaDeh() {
+            // console.log(user)
+            let user2 = "alkalas"
+        }
+
+        apaAjaDeh()
+        // console.log(user2)
+
+
+        let dataObject2 = {
+            nama: 'enricho',
+            umur: 0,
+            alamat: "jakarta",
+        }
+
+        // console.log(dataObject2)
+        // dataObject2.gender = 'male'
+        // dataObject2['gender'] = 'male'
+        // console.log(dataObject2)
+        // console.log(dataObject2['nama'])
+
+        let tanaman2 = ['apel', 'mangga', 'jeruk', 'anggur', 'jambu', 'pir', 'tomat']
+        tanaman2[0] = 'klutuk'
+        console.log(tanaman2.join('-'))
+        // console.log(tanaman2)
+    </script>
+    
+</body>
+</html>
